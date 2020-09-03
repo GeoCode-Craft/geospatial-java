@@ -10,11 +10,11 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/api/nairobisubcounty")
+@RequestMapping("/api/nairobisubcounties")
 public class NairobiSubCountyController {
 
     @Autowired
-    NairobiSubCountyService nairobiSubCountyService;
+    private NairobiSubCountyService nairobiSubCountyService;
 
     @GetMapping
     public List<NairobiSubCounty> findAll() {

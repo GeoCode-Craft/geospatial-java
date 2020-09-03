@@ -1,7 +1,8 @@
-package com.brianpondi.gis.service;
+package com.brianpondi.gis.service.Impl;
 
 import com.brianpondi.gis.entity.NairobiSubCounty;
 import com.brianpondi.gis.repository.NairobiSubCountyRepository;
+import com.brianpondi.gis.service.NairobiSubCountyService;
 import com.vividsolutions.jts.geom.Geometry;
 import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.io.ParseException;
@@ -19,11 +20,13 @@ import java.util.List;
 @Service
 public class NairobiSubCountyServiceImp implements NairobiSubCountyService {
 
+    @Autowired
+    NairobiSubCountyRepository nairobiSubCountyRepository;
+
     private static GeometryFactory geometryFactory = new GeometryFactory();
     private static WKTReader wktReader = new WKTReader(geometryFactory);
 
-    @Autowired
-    NairobiSubCountyRepository nairobiSubCountyRepository;
+
 
     private static Geometry fromWkt(String wkt) {
         try {

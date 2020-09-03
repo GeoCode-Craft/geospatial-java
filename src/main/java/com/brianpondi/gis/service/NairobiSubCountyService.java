@@ -2,11 +2,10 @@ package com.brianpondi.gis.service;
 
 import com.brianpondi.gis.entity.NairobiSubCounty;
 import javassist.NotFoundException;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+
 public interface NairobiSubCountyService {
     List<NairobiSubCounty> findAll();
     NairobiSubCounty findById(int id) throws NotFoundException;

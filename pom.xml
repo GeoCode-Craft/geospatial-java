@@ -97,6 +97,13 @@
             <artifactId>slf4j-api</artifactId>
             <version>1.7.30</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.graphhopper.external/jackson-datatype-jts -->
+        <dependency>
+            <groupId>com.graphhopper.external</groupId>
+            <artifactId>jackson-datatype-jts</artifactId>
+            <version>0.10-2.5-2</version>
+        </dependency>
+
 
 
     </dependencies>

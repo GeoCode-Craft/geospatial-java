@@ -1,6 +1,5 @@
 package com.brianpondi.gis.entity;
 
-import com.vividsolutions.jts.geom.Geometry;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,7 +17,7 @@ public class NairobiHealthFacility implements Serializable {
     @Id
     @GeneratedValue
     private Integer id;
-    private Geometry geom;
+//    private Point geom;
     private String name;
     private String contact;
 

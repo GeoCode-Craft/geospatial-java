@@ -1,23 +1,28 @@
-package com.brianpondi.gis.service;
+package com.brianpondi.gis.service.Impl;
 
 import com.brianpondi.gis.entity.NairobiHealthFacility;
 import com.brianpondi.gis.repository.NairobiHealthFacilityRepository;
+import com.brianpondi.gis.service.NairobiHealthFacilityService;
 import com.vividsolutions.jts.geom.Geometry;
 import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.io.ParseException;
 import com.vividsolutions.jts.io.WKTReader;
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class NairobiHealthFacilityServiceImp implements NairobiHealthFacilityService {
+
+    @Autowired
+    private NairobiHealthFacilityRepository nairobiHealthFacilityRepository;
 
     private static GeometryFactory geometryFactory = new GeometryFactory();
     private static WKTReader wktReader = new WKTReader(geometryFactory);
 
-    @Autowired
-    NairobiHealthFacilityRepository nairobiHealthFacilityRepository;
+
 
     private static Geometry fromWkt(String wkt) {
         try {
