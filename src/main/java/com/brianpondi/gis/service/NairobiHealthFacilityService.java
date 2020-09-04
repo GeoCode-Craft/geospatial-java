@@ -10,4 +10,5 @@ public interface NairobiHealthFacilityService {
     List<NairobiHealthFacility> findAll();
     NairobiHealthFacility findById(int id) throws NotFoundException;
     void deleteById(int id);
+//    NairobiHealthFacility findWithinSubCounty(String name);
 }

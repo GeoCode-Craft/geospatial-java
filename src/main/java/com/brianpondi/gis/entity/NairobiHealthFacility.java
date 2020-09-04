@@ -1,5 +1,10 @@
 package com.brianpondi.gis.entity;
 
+import com.bedatadriven.jackson.datatype.jts.serialization.GeometryDeserializer;
+import com.bedatadriven.jackson.datatype.jts.serialization.GeometrySerializer;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.vividsolutions.jts.geom.Point;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,8 +22,9 @@ public class NairobiHealthFacility implements Serializable {
     @Id
     @GeneratedValue
     private Integer id;
-//    private Point geom;
     private String name;
-    private String contact;
+    @JsonSerialize(using = GeometrySerializer.class)
+    @JsonDeserialize(contentUsing = GeometryDeserializer.class)
+    private Point geom;
 
 }

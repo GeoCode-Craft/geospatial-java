@@ -22,13 +22,8 @@ public class NairobiSubCountyController {
     }
 
     @GetMapping(path = "/{id}")
-    public NairobiSubCounty findById(@PathVariable("id") int id) {
-        try {
-            return nairobiSubCountyService.findById(id);
-        } catch (NotFoundException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public NairobiSubCounty findById(@PathVariable("id") int id) throws NotFoundException {
+        return nairobiSubCountyService.findById(id);
     }
 
     @DeleteMapping(path = "/{id}")

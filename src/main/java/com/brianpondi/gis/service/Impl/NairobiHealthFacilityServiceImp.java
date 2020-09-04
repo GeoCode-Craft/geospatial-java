@@ -34,7 +34,7 @@ public class NairobiHealthFacilityServiceImp implements NairobiHealthFacilitySer
     }
 
     public List<NairobiHealthFacility> findAll() {
-        return (List<NairobiHealthFacility>) nairobiHealthFacilityRepository.findAll();
+        return  nairobiHealthFacilityRepository.findAll();
     }
 
     public NairobiHealthFacility findById(int id) throws NotFoundException {
@@ -47,5 +47,10 @@ public class NairobiHealthFacilityServiceImp implements NairobiHealthFacilitySer
     public void deleteById(int id) {
         nairobiHealthFacilityRepository.deleteById(id);
     }
+
+//    @Override
+//    public NairobiHealthFacility findWithinSubCounty(String name) {
+//        return null;
+//    }
 
 }

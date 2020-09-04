@@ -38,7 +38,7 @@ public class NairobiSubCountyServiceImp implements NairobiSubCountyService {
     }
 
     public List<NairobiSubCounty> findAll() {
-        return (List<NairobiSubCounty>) nairobiSubCountyRepository.findAll();
+        return  nairobiSubCountyRepository.findAll();
     }
 
     public NairobiSubCounty findById(int id) throws NotFoundException {
@@ -48,11 +48,11 @@ public class NairobiSubCountyServiceImp implements NairobiSubCountyService {
     }
 
 //    public NairobiSubCounty create(String name, String wkt) {
-//        NairobiSubCounty nairobiSubCounty = NairobiSubCounty.Geometry()
+//        NairobiSubCounty nairobiSubCounty = NairobiSubCounty
+//                .builder()
 //                .name(name)
 //                .geometry(fromWkt(wkt))
 //                .build();
-//
 //        nairobiSubCountyRepository.save(nairobiSubCounty);
 //        return nairobiSubCounty;
 //    }
