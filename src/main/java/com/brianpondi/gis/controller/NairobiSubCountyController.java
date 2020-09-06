@@ -31,11 +31,5 @@ public class NairobiSubCountyController {
         nairobiSubCountyService.deleteById(id);
     }
 
-//    @PostMapping(path = "/{name}")
-//    public NairobiSubCounty create(@PathVariable("name") String name,
-//                           @RequestBody String wkt) {
-//        return nairobiSubCountyService.create(name, wkt);
-//    }
-
 }
 

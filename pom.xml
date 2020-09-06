@@ -61,22 +61,12 @@
             <artifactId>hibernate-core</artifactId>
             <version>5.4.20.Final</version>
         </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-java8</artifactId>
-            <version>5.4.20.Final</version>
-        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-spatial -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-spatial</artifactId>
             <version>5.4.20.Final</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.vividsolutions/jts -->
-        <dependency>
-            <groupId>com.vividsolutions</groupId>
-            <artifactId>jts</artifactId>
-            <version>1.13</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/net.postgis/postgis-jdbc -->
@@ -91,18 +81,14 @@
             <artifactId>HikariCP</artifactId>
             <version>3.4.5</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+
+        <!-- https://mvnrepository.com/artifact/org.n52.jackson/jackson-datatype-jts -->
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.30</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.graphhopper.external/jackson-datatype-jts -->
-        <dependency>
-            <groupId>com.graphhopper.external</groupId>
+            <groupId>org.n52.jackson</groupId>
             <artifactId>jackson-datatype-jts</artifactId>
-            <version>0.10-2.5-2</version>
+            <version>1.2.6</version>
         </dependency>
+
 
 
 
