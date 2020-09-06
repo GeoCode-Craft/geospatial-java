@@ -12,7 +12,7 @@ import java.util.List;
 public interface NairobiHealthFacilityRepository extends JpaRepository<NairobiHealthFacility, Integer> {
         @Query(value = "SELECT nhf.id, nhf.name, nhf.geom "
                       + "FROM nairobi_Health_facilities nhf, nairobi_sub_counties nsc "
-                      + "WHERE ST_Within(nhf.geom, nsc.geom) = true AND nsc.id= :subCountyId"
+                      + "WHERE ST_Within(nhf.geom, nsc.geom) AND nsc.id= :subCountyId"
                       , nativeQuery = true)
        List<NairobiHealthFacility> findAllHospitalsWithinSubCounty(@Param("subCountyId")  int subCountyId);
 

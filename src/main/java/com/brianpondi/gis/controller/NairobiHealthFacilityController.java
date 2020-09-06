@@ -29,7 +29,7 @@ public class NairobiHealthFacilityController {
         }
     }
 
-    @GetMapping(path = "/findwithinsubcounty/{id}")
+    @GetMapping(path = "/findhospitalswithinsubcounty/{id}")
     public List<NairobiHealthFacility> findAllHospitalsWithinSubCounty(@PathVariable("id") int id) {
         return nairobiHealthFacilityService.findAllHospitalsWithinSubCounty(id);
     }
