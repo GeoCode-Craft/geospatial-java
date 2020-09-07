@@ -21,7 +21,7 @@ public class NairobiHealthFacilityServiceImp implements NairobiHealthFacilitySer
 
     public NairobiHealthFacility findById(int id) throws NotFoundException {
         return nairobiHealthFacilityRepository.findById(id).orElseThrow(
-                () -> new NotFoundException("Sub County not found with ID: " + id)
+                () -> new NotFoundException("Health Facility with ID: " + id + " not found.")
         );
     }
 

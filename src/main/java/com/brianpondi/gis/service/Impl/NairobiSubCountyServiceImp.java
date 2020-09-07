@@ -21,7 +21,7 @@ public class NairobiSubCountyServiceImp implements NairobiSubCountyService {
 
     public NairobiSubCounty findById(int id) throws NotFoundException {
         return nairobiSubCountyRepository.findById(id).orElseThrow(
-                () -> new NotFoundException("Sub County not found with ID: " + id)
+                () -> new NotFoundException("Sub-County with ID: " + id + " not found.")
         );
     }
 
