@@ -20,8 +20,8 @@ public class NairobiHealthFacilityController {
         return nairobiHealthFacilityService.findAll();
     }
 
-    @GetMapping(path = "/{id}")
-    public NairobiHealthFacility findById(@PathVariable("id") int id) {
+    @GetMapping(path = "/")
+    public NairobiHealthFacility findById(@RequestParam("id") int id) {
         try {
             return nairobiHealthFacilityService.findById(id);
         } catch (NotFoundException e) {
@@ -29,21 +29,22 @@ public class NairobiHealthFacilityController {
         }
     }
 
-    @GetMapping(path = "/findhospitalswithinsubcounty/{id}")
-    public List<NairobiHealthFacility> findAllHospitalsWithinSubCounty(@PathVariable("id") int id) {
+    @GetMapping(path = "/hospitalswithinsubcounty")
+    public List<NairobiHealthFacility> findAllHospitalsWithinSubCounty(@RequestParam("id") int id) {
         return nairobiHealthFacilityService.findAllHospitalsWithinSubCounty(id);
     }
 
-    @GetMapping(path = "/nearesthealthfacilities/{userLongitude}/{userLatitude}")
-    public List<NairobiHealthFacility> findAllHospitalsByDistanceFromUser(@PathVariable("userLongitude") double userLongitude,
-                                                                          @PathVariable("userLatitude") double userLatitude) {
+    @GetMapping(path = "/nearbyhealthfacilities") 
+    public List<NairobiHealthFacility> findAllHospitalsByDistanceFromUser(@RequestParam("userlocation") List<Double> userLocation) {
+        //this extraction can also be implemented in return method
+        double userLongitude = userLocation.get(0);
+        double userLatitude = userLocation.get(1);
+
         return nairobiHealthFacilityService.findAllHospitalsByDistanceFromUser(userLongitude, userLatitude);
     }
 
-    @DeleteMapping(path = "/{id}")
-    public void deleteById(@PathVariable("id") int id) {
+    @DeleteMapping(path = "/")
+    public void deleteById(@RequestParam("id") int id) {
         nairobiHealthFacilityService.deleteById(id);
     }
-
-
 }
